@@ -2,6 +2,21 @@ import streamlit as st
 import numpy as np
 import joblib
 
+st.set_page_config(page_title="CVD Risk Checker", layout="centered")
+
+st.title("🫀 Check Your Heart Risk")
+
+st.markdown("""
+👋 **Welcome!**
+
+This simple tool helps you check if you're at risk of **heart disease**.
+
+Please enter your health info below. If you’re not sure, ask someone to help you.
+
+📝 **Note:** This is not a medical diagnosis. It’s just a helpful early check.
+""")
+
+
 model = joblib.load('cvd_model.pkl')
 scaler = joblib.load('cvd_scaler.pkl')
 
@@ -36,3 +51,6 @@ if st.button("Check My Risk"):
         st.error(f"⚠️ High risk of CVD ({probability * 100:.2f}% chance)")
     else:
         st.success(f"✅ Low risk of CVD ({(1 - probability) * 100:.2f}% chance)")
+
+st.caption("⚠️ This tool is for educational use only. Please consult a doctor for medical advice.")
+
