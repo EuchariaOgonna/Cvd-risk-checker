@@ -58,8 +58,8 @@ Built with **Python**, **Streamlit**, and **Scikit-learn**, this app is easy to 
 
 ## ⚠️ Disclaimer
 
-This tool is for educational and awareness purposes only.  
-It does not replace medical diagnosis. Always consult a qualified healthcare provider.
+## This tool is for educational and awareness purposes only.  
+## It does not replace medical diagnosis. Always consult a qualified healthcare provider.
 
 ---
 
