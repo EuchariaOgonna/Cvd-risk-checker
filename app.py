@@ -54,3 +54,13 @@ if st.button("Check My Risk"):
 
 st.caption("⚠️ This tool is for educational use only. Please consult a doctor for medical advice.")
 
+st.markdown("---")
+st.markdown("""
+<p style='text-align: center; font-size: 16px;'>
+    Built with ❤️ by <strong>Eucharia Ogonna</strong><br>
+    <a href='https://github.com/EuchariaOgonna' target='_blank'>GitHub</a> | 
+    <a href='mailto:nwankwoeucharia33@gmail.com'>Email</a>
+</p>
+""", unsafe_allow_html=True)
+
+
