@@ -49,7 +49,7 @@ Built with **Python**, **Streamlit**, and **Scikit-learn**, this app is easy to 
 ├── app.py              # Streamlit app interface
 ├── cvd_model.pkl       # Trained logistic regression model
 ├── cvd_scaler.pkl      # Feature scaler
-└── requirements.txt    # Python dependencies
+└── requirements.txt    # Python dependencies.
 ```
 
 
