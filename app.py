@@ -40,6 +40,25 @@ smoke = 1 if smoke == "Yes" else 0
 alco = 1 if alco == "Yes" else 0
 active = 1 if active == "Yes" else 0
 
+# Check blood pressure status
+def classify_bp(systolic, diastolic):
+    if systolic > 180 or diastolic > 120:
+        return "Hypertensive Crisis 🚨"
+    elif systolic >= 140 or diastolic >= 90:
+        return "Hypertension Stage 2 🔴"
+    elif 130 <= systolic <= 139 or 80 <= diastolic <= 89:
+        return "Hypertension Stage 1 🟠"
+    elif 120 <= systolic <= 129 and diastolic < 80:
+        return "Elevated 🟡"
+    elif systolic < 90 or diastolic < 60:
+        return "Low 🟣"
+    else:
+        return "Normal 🟢"
+
+bp_status = classify_bp(ap_hi, ap_lo)
+st.markdown(f"### 🧾 Your Blood Pressure Status: **{bp_status}**")
+
+
 if st.button("Check My Risk"):
     input_data = np.array([[age, gender, height, weight, ap_hi, ap_lo,
                             cholesterol, gluc, smoke, alco, active]])
